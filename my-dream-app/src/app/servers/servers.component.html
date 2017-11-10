@@ -1,13 +1,20 @@
 <label>Server Name</label>
 <!-- Event binding -->
-<input type="text" class="form-control" (input)="onUpdateServerName($event)">
+<!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)"> -->
 <!-- Two way binding, The syntax is called that "Banana in a Box" -->
 <input type="text" class="form-control" [(ngModel)]="serverName">
 
 <p>{{ serverName }}</p>
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+<!-- String Interpolation -->
 <!-- <p>{{ allowNewServer }}</p>
 <p [innerText]="allowNewServer"></p> -->
 <p>{{ serverCreationStatus }}</p>
 <app-server></app-server>
 <app-server></app-server>
+
+<input type="text" class="form-control" [(ngModel)]="username">
+<p>{{ username }}</p>
+<button class="btn btn-primary" [disabled]="username === ''" (click)="username = ''">Reset UserName</button>
+<!-- Len made it -->
+<!-- <button class="btn btn-primary" [disabled]="!username" (click)="ResetUsername()">Reset UserName</button> -->
