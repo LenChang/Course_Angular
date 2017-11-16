@@ -3,8 +3,9 @@
 <!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)"> -->
 <!-- Two way binding, The syntax is called that "Banana in a Box" -->
 <input type="text" class="form-control" [(ngModel)]="serverName">
-
+<!-- String Interpolation -->
 <p>{{ serverName }}</p>
+<!-- Property binding -->
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
 <!-- <p>{{ serverCreationStatus }}</p> -->
 
