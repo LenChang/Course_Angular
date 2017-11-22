@@ -18,3 +18,12 @@
     <p>No server was created!</p>
 </ng-template>
 <app-server *ngFor="let server of servers"></app-server>
+
+<!-- <button class="btn btn-primary" (click)="displayDetails = !displayDetails">Display Details</button> -->
+<button class="btn btn-primary" (click)="onDisplayDetails()">Display Details</button>
+<p *ngIf="displayDetails">Secret Password = tuna</p>
+<div 
+    *ngFor="let item of disDetailsActions"
+    [ngStyle]="{backgroundColor: item >= 5 ? 'blue' : 'transparent'}"
+    [ngClass]="{'white-text': item >= 5}"
+>{{ item }}</div>
