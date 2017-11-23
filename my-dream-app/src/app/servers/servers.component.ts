@@ -38,7 +38,7 @@ export class ServersComponent implements OnInit {
   onDisplayDetails() {
     this.displayDetails = !this.displayDetails;
     // this.disDetailsActions.push(Date.now());
-    this.disDetailsActions.push(this.disDetailsActions.length + 1);
+    this.disDetailsActions.push(new Date());
   }
 
   // Event Binding

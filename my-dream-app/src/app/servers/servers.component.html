@@ -23,7 +23,7 @@
 <button class="btn btn-primary" (click)="onDisplayDetails()">Display Details</button>
 <p *ngIf="displayDetails">Secret Password = tuna</p>
 <div 
-    *ngFor="let item of disDetailsActions"
-    [ngStyle]="{backgroundColor: item >= 5 ? 'blue' : 'transparent'}"
-    [ngClass]="{'white-text': item >= 5}"
+    *ngFor="let item of disDetailsActions; let i = index"
+    [ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'transparent'}"
+    [ngClass]="{'white-text': i >= 5}"
 >{{ item }}</div>
