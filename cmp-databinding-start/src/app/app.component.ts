@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { ServerElementComponent } from "./server-element/server-element.component";
 
 @Component({
   selector: "app-root",
@@ -22,5 +23,9 @@ export class AppComponent {
       name: blueprintData.serverName,
       content: blueprintData.serverContent,
     });
+  }
+
+  onChangeFirst() {
+    this.serverElements[0].name = "Changed";
   }
 }
