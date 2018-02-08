@@ -43,13 +43,12 @@ export class ServerElementComponent
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log("ngonChanges is called");
+    console.log(`ngOnChanges is called`);
     console.log(changes);
   }
 
   ngOnInit() {
-    console.log("ngOnInit is called");
-    console.log(`Text Content is ${this.header.nativeElement.textContent}`);
+    console.log(`ngOnInit is called. Text Content is ${this.header.nativeElement.textContent}`);
   }
 
   ngDoCheck() {
@@ -59,8 +58,7 @@ export class ServerElementComponent
     console.log("ngContentInit is called");
   }
   ngAfterContentChecked() {
-    console.log("ngAfterContentChecked is called");
-    console.log(`Text Content is ${this.header.nativeElement.textContent}`);
+    console.log(`ngAfterContentChecked is called. Text Content is ${this.header.nativeElement.textContent}`);
   }
   ngOnDestroy() {
     console.log("ngOnDestroy is called");
