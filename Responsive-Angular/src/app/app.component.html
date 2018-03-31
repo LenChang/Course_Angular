@@ -1,10 +1,16 @@
-<div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutAlign.xs="center stretch" class="row-example">
+<!-- <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutAlign.xs="center stretch" class="row-example">
   <div>1</div>
   <div>2</div>
   <div>3</div>
-</div>
+</div> -->
 
-
+<mat-grid-list [cols]="cols" gutterSize="16px" class="row-example">
+  <mat-grid-tile>1</mat-grid-tile>
+  <mat-grid-tile>2</mat-grid-tile>
+  <mat-grid-tile>3</mat-grid-tile>
+  <mat-grid-tile>4</mat-grid-tile>
+</mat-grid-list>
+<!-- 
 <div fxLayout="row" fxShow="true" fxHide.xs="true" class="row-example">
   <div>7</div>
   <div>8</div>
@@ -15,4 +21,4 @@
   <div>4</div>
   <div>5</div>
   <div>6</div>
-</div>
+</div> -->
