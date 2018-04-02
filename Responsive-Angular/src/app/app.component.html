@@ -3,13 +3,22 @@
   <div>2</div>
   <div>3</div>
 </div> -->
-
-<mat-grid-list [cols]="cols" gutterSize="16px" class="row-example">
-  <mat-grid-tile>1</mat-grid-tile>
-  <mat-grid-tile>2</mat-grid-tile>
-  <mat-grid-tile>3</mat-grid-tile>
-  <mat-grid-tile>4</mat-grid-tile>
-</mat-grid-list>
+<mat-card>
+  <mat-card-title>Basic grid list</mat-card-title>
+  <mat-card-content>
+    <mat-grid-list [cols]="cols" gutterSize="20px" rowHeight="100px">
+      <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+        {{tile.text}}
+      </mat-grid-tile>
+      <!-- <mat-grid-tile>1</mat-grid-tile>
+      <mat-grid-tile>2</mat-grid-tile>
+      <mat-grid-tile>3</mat-grid-tile>
+      <mat-grid-tile>4</mat-grid-tile> -->
+    </mat-grid-list>
+    <!-- Content -->
+  </mat-card-content>
+  <mat-card-footer>Footer</mat-card-footer>
+</mat-card>
 <!-- 
 <div fxLayout="row" fxShow="true" fxHide.xs="true" class="row-example">
   <div>7</div>

@@ -11,26 +11,51 @@ import { ObservableMedia } from "@angular/flex-layout";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent implements OnInit {
+  tiles = [
+    { text: "QueryBar", cols: 3, rows: 1, color: "lightblue" },
+    { text: "Maps", cols: 7, rows: 6, color: "lightgreen" },
+    { text: "WatRInfo", cols: 3, rows: 5, color: "lightpink" },
+    // {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
+  ];
+
   constructor(private observableMedia: ObservableMedia) {
     observableMedia.asObservable().subscribe(change => {
+      // console.log(change.mqAlias);
       if (change.mqAlias == "xs") {
         this.cols = 1;
+        this.tiles = [
+          { text: "QueryBar", cols: 1, rows: 1, color: "lightblue" },
+          { text: "Maps", cols: 1, rows: 2, color: "lightgreen" },
+          { text: "WatRInfo", cols: 1, rows: 2, color: "lightpink" },
+          // {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
+        ];
       } else if (change.mqAlias == "sm") {
-        this.cols = 2;
+        this.cols = 1;
+        this.tiles = [
+          { text: "QueryBar", cols: 1, rows: 1, color: "lightblue" },
+          { text: "Maps", cols: 1, rows: 2, color: "lightgreen" },
+          { text: "WatRInfo", cols: 1, rows: 2, color: "lightpink" },
+          // {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
+        ];
       } else {
-        this.cols = 3;
+        this.cols = 10;
+        this.tiles = [
+          { text: "QueryBar", cols: 3, rows: 1, color: "lightblue" },
+          { text: "Maps", cols: 7, rows: 6, color: "lightgreen" },
+          { text: "WatRInfo", cols: 3, rows: 5, color: "lightpink" },
+          // {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
+        ];
       }
       // console.log(change.mqAlias);
     });
   }
-  title = "app";
 
   /**
    * The number of colums in the md-grid-list directive.
    */
-  cols = 2;
+  cols = 10;
 
   ngOnInit() {
-    this.cols = 1;
+    // this.cols = 1;
   }
 }
